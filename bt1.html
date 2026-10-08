@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập Kiểm Tra Số Chia Hết Cho 7</title>
+</head>
+<body>
+
+    <h2>Kiểm tra số chia hết cho 7</h2>
+
+    <!-- Form nhập dữ liệu bằng phương thức POST -->
+    <form action="" method="POST">
+        <label for="number">Nhập vào một số:</label>
+        <input type="number" id="number" name="number" required>
+        <button type="submit" name="check">Kiểm tra</button>
+    </form>
+
+    <br>
+
+    <?php
+    // Kiểm tra xem người dùng đã nhấn nút "Kiểm tra" (submit form) chưa
+    if (isset($_POST['check'])) {
+        // Lấy giá trị nhập từ ô input name="number"
+        $number = $_POST['number'];
+
+        // Kiểm tra chia hết cho 7 bằng toán tử chia lấy dư (%)
+        if ($number % 7 == 0) {
+            echo "Số $number chia hết cho 7";
+        } else {
+            echo "Số $number không chia hết cho 7";
+        }
+    }
+    ?>
+
+</body>
+</html>

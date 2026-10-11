@@ -1,5 +1,4 @@
 <?php
-
 // for($i = 0 ; $i<101 ; $i++){
 //     if($i % 2 == 0){
 //         echo $i . "<br>";
@@ -100,12 +99,29 @@ $students = array(
     )
 );
 
+echo "<table border='1'>";
 
+echo "<thead>";
+echo "<tr>";
+echo "<th>Name</th>";
+echo "<th>Email</th>";
+echo "<th>Age</th>";
+echo "</tr>";
+echo "</thead>";
 
+echo "<tbody>";
 
+for ($i = 0; $i < count($students); $i++) {
+    echo "<tr>";
+    echo "<td>" . $students[$i]['name'] . "</td>";
+    echo "<td>" . $students[$i]['email'] . "</td>";
+    echo "<td>" . $students[$i]['age'] . "</td>";
+    echo "</tr>";
+}
 
-
-
-
+echo "</tbody>";
+echo "</table>";
 
 ?>
+
+

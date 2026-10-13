@@ -66,6 +66,67 @@
 
 
 
+// $students = array(
+//     array(
+//         'name' => 'Nguyễn Văn Cường 1',
+//         'email' => 'thehalfheart1@gmail.com',
+//         'age' => '29'
+//     ),
+//     array(
+//         'name' => 'Nguyễn Văn Cường 2',
+//         'email' => 'thehalfheart2@gmail.com',
+//         'age' => '29'
+//     ),
+//     array(
+//         'name' => 'Nguyễn Văn Cường 3',
+//         'email' => 'thehalfheart3@gmail.com',
+//         'age' => '29'
+//     ),
+//     array(
+//         'name' => 'Nguyễn Văn Cường 4',
+//         'email' => 'thehalfheart4@gmail.com',
+//         'age' => '29'
+//     ),
+//     array(
+//         'name' => 'Nguyễn Văn Cường 5',
+//         'email' => 'thehalfheart5@gmail.com',
+//         'age' => '29'
+//     ),
+//     array(
+//         'name' => 'Nguyễn Văn Cường 6',
+//         'email' => 'thehalfheart6@gmail.com',
+//         'age' => '29'
+//     )
+// );
+
+// echo "<table border='1'>";
+
+// echo "<thead>";
+// echo "<tr>";
+// echo "<th>Name</th>";
+// echo "<th>Email</th>";
+// echo "<th>Age</th>";
+// echo "</tr>";
+// echo "</thead>";
+
+// echo "<tbody>";
+
+// for ($i = 0; $i < count($students); $i++) {
+//     echo "<tr>";
+//     echo "<td>" . $students[$i]['name'] . "</td>";
+//     echo "<td>" . $students[$i]['email'] . "</td>";
+//     echo "<td>" . $students[$i]['age'] . "</td>";
+//     echo "</tr>";
+// }
+
+// echo "</tbody>";
+// echo "</table>";
+
+?>
+
+
+<?php
+
 $students = array(
     array(
         'name' => 'Nguyễn Văn Cường 1',
@@ -99,29 +160,50 @@ $students = array(
     )
 );
 
-echo "<table border='1'>";
+$html = "";
+// for ($i = 0 ; $i< count($students) ; $i++){
+//     $html .= "<tr>" .
+//             "<td>" . $students[$i]['name'] . "</td>" .
+//             "<td>" . $students[$i]['email'] . "</td>" .
+//             "<td>" . $students[$i]['age'] . "</td>" .
+//             "</tr>";
+// }
 
-echo "<thead>";
-echo "<tr>";
-echo "<th>Name</th>";
-echo "<th>Email</th>";
-echo "<th>Age</th>";
-echo "</tr>";
-echo "</thead>";
 
-echo "<tbody>";
-
-for ($i = 0; $i < count($students); $i++) {
-    echo "<tr>";
-    echo "<td>" . $students[$i]['name'] . "</td>";
-    echo "<td>" . $students[$i]['email'] . "</td>";
-    echo "<td>" . $students[$i]['age'] . "</td>";
-    echo "</tr>";
+foreach($students as $students){
+    $html .= "<tr>" .
+            "<td>" . $student['name'] . "</td>" .
+            "<td>" . $student['email'] . "</td>" .
+            "<td>" . $student['age'] . "</td>" .
+            "</tr>";
 }
 
-echo "</tbody>";
-echo "</table>";
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<table border="1">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php echo $html; ?>
+        </tbody>
+    </table>
+</body>
+</html>
+
+
 
 
